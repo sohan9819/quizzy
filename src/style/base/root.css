@@ -1,0 +1,77 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+/* CSS VARIABLES  */
+:root .light {
+  --color-light: hsl(47, 100%, 97%) !important;
+  --color-dark: hsl(220, 5%, 11%) !important;
+  --color-primary: hsl(180, 100%, 25%) !important;
+  --color-secondary: hsl(7, 93%, 65%) !important;
+  --color-gray: hsl(0, 0%, 21%) !important;
+
+  --border-radius: 2rem;
+  --card-border-radius: 1rem;
+  --btn-padding: 0.6rem 2rem;
+  --search-padding: 0.6rem 1rem;
+  --card-padding: 1rem;
+
+  --sticky-top-left: 5.4rem;
+  --sticky-top-right: -18rem;
+}
+
+:root .dark {
+  --color-light: hsl(220, 5%, 11%) !important;
+  --color-dark: hsl(47.1, 100%, 97.3%) !important;
+  --color-primary: hsl(180, 100%, 25%) !important;
+  --color-secondary: hsl(7, 93%, 65%) !important;
+  --color-gray: hsl(0, 0%, 21%) !important;
+
+  --border-radius: 2rem;
+  --card-border-radius: 1rem;
+  --btn-padding: 0.6rem 2rem;
+  --search-padding: 0.6rem 1rem;
+  --card-padding: 1rem;
+
+  --sticky-top-left: 5.4rem;
+  --sticky-top-right: -18rem;
+}
+
+/* DARK THEME CSS VARIABLES  */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-light: hsl(220, 5%, 11%) !important;
+    --color-dark: hsl(47.1, 100%, 97.3%) !important;
+    --color-primary: hsl(180, 100%, 25%) !important;
+    --color-secondary: hsl(7, 93%, 65%) !important;
+    --color-gray: hsl(0, 0%, 21%) !important;
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+  }
+}
+
+/* LIGHT THEME CSS VARIABLES  */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-light: hsl(47.1, 100%, 97.3%) !important;
+    --color-dark: hsl(220, 5%, 11%) !important;
+    --color-primary: hsl(180, 100%, 25%) !important;
+    --color-secondary: hsl(7, 93%, 65%) !important;
+    --color-gray: hsl(0, 0%, 21%) !important;
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+  }
+}
