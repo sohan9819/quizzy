@@ -8,6 +8,7 @@
   padding: 1.5rem;
   position: fixed;
   top: 0;
+  z-index: 20;
 }
 
 .navbar a {
@@ -15,9 +16,17 @@
   color: inherit;
 }
 
-.logo {
+.title {
   margin-right: 50px;
   font-size: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title .logo {
+  font-size: 4rem;
 }
 
 .menu {
@@ -28,4 +37,50 @@
   list-style: none;
   display: flex;
   gap: 25px;
+}
+
+.menu .list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-icon {
+  font-size: 3rem;
+}
+
+#nav-toggler,
+.nav-toggler {
+  display: none;
+}
+
+.nav-toggler {
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    width: 100%;
+    max-height: 0;
+    transform: translateY(-2rem);
+    opacity: 0;
+    transform-origin: top;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+  }
+  .list {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .navbar label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  #nav-toggler:checked ~ .menu {
+    max-height: 100%;
+    transform: translateY(0rem);
+    opacity: 1;
+  }
 }

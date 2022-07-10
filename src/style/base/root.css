@@ -9,6 +9,9 @@
   --color-secondary: hsl(7, 93%, 65%) !important;
   --color-gray: hsl(0, 0%, 21%) !important;
 
+  --color-green: hsl(135, 94%, 65%);
+  --color-red: hsl(0, 100%, 67%);
+
   --border-radius: 2rem;
   --card-border-radius: 1rem;
   --btn-padding: 0.6rem 2rem;
@@ -25,6 +28,9 @@
   --color-primary: hsl(180, 100%, 25%) !important;
   --color-secondary: hsl(7, 93%, 65%) !important;
   --color-gray: hsl(0, 0%, 21%) !important;
+
+  --color-green: hsl(135, 94%, 65%);
+  --color-red: hsl(0, 100%, 67%);
 
   --border-radius: 2rem;
   --card-border-radius: 1rem;
@@ -45,6 +51,9 @@
     --color-secondary: hsl(7, 93%, 65%) !important;
     --color-gray: hsl(0, 0%, 21%) !important;
 
+    --color-green: hsl(135, 94%, 65%);
+    --color-red: hsl(0, 100%, 67%);
+
     --border-radius: 2rem;
     --card-border-radius: 1rem;
     --btn-padding: 0.6rem 2rem;
@@ -64,6 +73,9 @@
     --color-primary: hsl(180, 100%, 25%) !important;
     --color-secondary: hsl(7, 93%, 65%) !important;
     --color-gray: hsl(0, 0%, 21%) !important;
+
+    --color-green: hsl(135, 94%, 65%);
+    --color-red: hsl(0, 100%, 67%);
 
     --border-radius: 2rem;
     --card-border-radius: 1rem;

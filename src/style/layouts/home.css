@@ -1,0 +1,25 @@
+.container.home {
+  padding-top: 8.4rem;
+}
+
+.container.home .game-selector {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  font-size: 2rem;
+}
+
+.container.home .game-selector .category-selector #category {
+  padding: 0.8rem 1rem;
+  border-radius: var(--border-radius);
+}
+
+.container.home .game-selector .difficulty-selector {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+}
