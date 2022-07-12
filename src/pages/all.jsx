@@ -1,7 +1,9 @@
 import { Landing } from './Landing';
 import { Home } from './Home';
-import { Auth } from './Auth';
+import { Profile } from './Profile';
 import { SignIn } from './SignIn';
 import { SignUp } from './SignUp';
+import { Game } from './Game';
+import { Result } from './Result';
 
-export { Landing, Home, Auth, SignIn, SignUp };
+export { Landing, Home, Profile, SignIn, SignUp, Game, Result };

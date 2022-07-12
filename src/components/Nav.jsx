@@ -17,7 +17,7 @@ export const Nav = () => {
       <div className='menu'>
         <ul className='list'>
           <li>
-            <Link to={'/auth'}>
+            <Link to={'/profile'}>
               <FiUser className='user-icon' />
             </Link>
           </li>

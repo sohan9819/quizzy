@@ -7,7 +7,7 @@ export const SignUp = () => {
     <Layout>
       <div class='container auth'>
         <article class='auth-card'>
-          <h2 class='logo'>METAGRAM</h2>
+          <h2 class='logo'>Quizzy</h2>
           <p class='message'>
             Welcome , <br />
             sign up to join 😉

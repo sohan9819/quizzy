@@ -1,6 +1,6 @@
 import { Layout } from '../layout/layout';
 
-export const Game = () => {
+export const Result = () => {
   return (
     <Layout>
       <div className='container game'>
@@ -12,10 +12,10 @@ export const Game = () => {
             Difficulty : <h3>Hard </h3>
           </div>
           <div>
-            Timer : <h3>10:00</h3>
+            Score : <h3>10 / 20</h3>
           </div>
         </div>
-        <form className='questions'>
+        <div className='questions'>
           <ol className='questions-list'>
             <li className='question'>
               <h2 className='qt'>
@@ -24,20 +24,16 @@ export const Game = () => {
               </h2>
               <ul className='options'>
                 <li className='option'>
-                  <input type='radio' name='q1' id='q1opt1' />
-                  <label htmlFor='q1opt1'>Option 1</label>
+                  <label className=''>Option 1</label>
                 </li>
                 <li className='option'>
-                  <input type='radio' name='q1' id='q1opt2' />
-                  <label htmlFor='q1opt2'>Option 2</label>
+                  <label className=''>Option 2</label>
                 </li>
                 <li className='option'>
-                  <input type='radio' name='q1' id='q1opt3' />
-                  <label htmlFor='q1opt3'>Option 3</label>
+                  <label className='wrong'>Option 3</label>
                 </li>
                 <li className='option'>
-                  <input type='radio' name='q1' id='q1opt4' />
-                  <label htmlFor='q1opt4'>Option 4</label>
+                  <label className=''>Option 4</label>
                 </li>
               </ul>
             </li>
@@ -45,20 +41,16 @@ export const Game = () => {
               <h2 className='qt'>This is the question ?</h2>
               <ul className='options'>
                 <li className='option'>
-                  <input type='radio' name='q2' id='q2opt1' />
-                  <label htmlFor='q2opt1'>Option 1</label>
+                  <label className=''>Option 1</label>
                 </li>
                 <li className='option'>
-                  <input type='radio' name='q2' id='q2opt2' />
-                  <label htmlFor='q2opt2'>Option 2</label>
+                  <label className='right'>Option 2</label>
                 </li>
                 <li className='option'>
-                  <input type='radio' name='q2' id='q2opt3' />
-                  <label htmlFor='q2opt3'>Option 3</label>
+                  <label className=''>Option 3</label>
                 </li>
                 <li className='option'>
-                  <input type='radio' name='q2' id='q2opt4' />
-                  <label htmlFor='q2opt4'>Option 4</label>
+                  <label className=''>Option 4</label>
                 </li>
               </ul>
             </li>
@@ -66,20 +58,16 @@ export const Game = () => {
               <h2 className='qt'>This is the question ?</h2>
               <ul className='options'>
                 <li className='option'>
-                  <input type='radio' name='q3' id='q3opt1' />
-                  <label htmlFor='q3opt1'>Option 1</label>
+                  <label className=''>Option 1</label>
                 </li>
                 <li className='option'>
-                  <input type='radio' name='q3' id='q3opt2' />
-                  <label htmlFor='q3opt2'>Option 2</label>
+                  <label className=''>Option 2</label>
                 </li>
                 <li className='option'>
-                  <input type='radio' name='q3' id='q3opt3' />
-                  <label htmlFor='q3opt3'>Option 3</label>
+                  <label className='right'>Option 3</label>
                 </li>
                 <li className='option'>
-                  <input type='radio' name='q3' id='q3opt4' />
-                  <label htmlFor='q3opt4'>Option 4</label>
+                  <label className=''>Option 4</label>
                 </li>
               </ul>
             </li>
@@ -87,28 +75,22 @@ export const Game = () => {
               <h2 className='qt'>This is the question ?</h2>
               <ul className='options'>
                 <li className='option'>
-                  <input type='radio' name='q4' id='q4opt1' />
-                  <label htmlFor='q4opt1'>Option 1</label>
+                  <label className=''>Option 1</label>
                 </li>
                 <li className='option'>
-                  <input type='radio' name='q4' id='q4opt2' />
-                  <label htmlFor='q4opt2'>Option 2</label>
+                  <label className=''>Option 2</label>
                 </li>
                 <li className='option'>
-                  <input type='radio' name='q4' id='q4opt3' />
-                  <label htmlFor='q4opt3'>Option 3</label>
+                  <label className='wrong'>Option 3</label>
                 </li>
                 <li className='option'>
-                  <input type='radio' name='q4' id='q4opt4' />
-                  <label htmlFor='q4opt4'>Option 4</label>
+                  <label className=''>Option 4</label>
                 </li>
               </ul>
             </li>
           </ol>
-          <button type='submit' className='btn btn-secondary'>
-            Submit
-          </button>
-        </form>
+          <button className='btn btn-primary'>Try Again</button>
+        </div>
       </div>
     </Layout>
   );

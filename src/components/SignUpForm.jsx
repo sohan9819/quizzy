@@ -13,7 +13,7 @@ export const SignUpForm = () => {
           required
         />
       </label>
-      <label htmlFor='nickname' className='auth-label'>
+      {/* <label htmlFor='nickname' className='auth-label'>
         Nickname<span className='imp-mark'>*</span>
         <br />
         <input
@@ -24,7 +24,7 @@ export const SignUpForm = () => {
           autoComplete='off'
           required
         />
-      </label>
+      </label> */}
       <label htmlFor='email' className='auth-label'>
         Email<span className='imp-mark'>*</span>
         <br />

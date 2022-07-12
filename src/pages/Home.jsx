@@ -5,6 +5,7 @@ export const Home = () => {
       <div className='container home'>
         <form className='game-selector'>
           <div className='category-selector'>
+            <h2>Category</h2>
             <select name='category' id='category'>
               <option value='9'>General Knowledge</option>
               <option value='10'>Book</option>
@@ -16,16 +17,28 @@ export const Home = () => {
             </select>
           </div>
           <div className='difficulty-selector'>
+            <h2>Difficulty</h2>
             <label htmlFor='easy'>
-              <input type='radio' name='difficulty' id='easy' required />
+              <input
+                type='radio'
+                value='easy'
+                name='difficulty'
+                id='easy'
+                required
+              />
               &nbsp; Easy
             </label>
             <label htmlFor='medium'>
-              <input type='radio' name='difficulty' id='medium' />
+              <input
+                type='radio'
+                value='medium'
+                name='difficulty'
+                id='medium'
+              />
               &nbsp; Medium
             </label>
             <label htmlFor='hard'>
-              <input type='radio' name='difficulty' id='hard' />
+              <input type='radio' value='hard' name='difficulty' id='hard' />
               &nbsp; Hard
             </label>
           </div>

@@ -12,6 +12,10 @@
   font-size: 2rem;
 }
 
+.container.home .game-selector .category-selector {
+  text-align: center;
+}
+
 .container.home .game-selector .category-selector #category {
   padding: 0.8rem 1rem;
   border-radius: var(--border-radius);
