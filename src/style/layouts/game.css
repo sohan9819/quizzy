@@ -1,0 +1,84 @@
+.container.game {
+  padding-top: 9rem;
+  min-height: 100vh;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80rem;
+  width: 100vw;
+}
+
+.container.game .game-info {
+  font-size: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  gap: 2rem;
+  border-bottom: 2px solid var(--color-dark);
+}
+
+.container.game .questions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+  padding-left: 2rem;
+}
+
+.container.game .questions .questions-list {
+  /* list-style: none; */
+  font-size: 2rem;
+}
+
+.container.game .questions .questions-list .question {
+  text-align: left;
+  /* word-break: break-all; */
+}
+
+.container.game .questions .questions-list .question .options {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin: 1.8rem 0rem 2.5rem;
+}
+
+.container.game .questions .questions-list .question .options .option input {
+  display: none;
+}
+
+.container.game .questions .questions-list .question .options .option label {
+  background: var(--color-dark);
+  color: var(--color-light);
+  padding: var(--card-padding);
+  border-radius: var(--border-radius);
+}
+
+.container.game
+  .questions
+  .questions-list
+  .question
+  .options
+  .option
+  input[type='radio']:checked
+  ~ label {
+  background: var(--color-light);
+  color: var(--color-dark);
+  border: 2px solid var(--color-dark);
+}
+
+.container.game .questions .questions-list .question .options .option .right {
+  background: var(--color-green);
+}
+.container.game .questions .questions-list .question .options .option .wrong {
+  background: var(--color-red);
+}

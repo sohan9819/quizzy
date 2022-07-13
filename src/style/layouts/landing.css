@@ -1,0 +1,20 @@
+.container.landing {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.container.landing .intro {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.container.landing .title,
+.container.landing .logo {
+  font-size: 6rem;
+  width: 100%;
+}
+
+.container.landing .intro .btn {
+  margin-top: 2rem;
+}

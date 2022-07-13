@@ -1,0 +1,88 @@
+.container.auth {
+  min-height: 100vh;
+  height: max-content;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8.4rem;
+}
+
+.container.auth .auth-card {
+  padding: 2rem;
+  height: max-content;
+  width: 100vw;
+  max-width: 32rem;
+  background: var(--color-dark);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  margin: 1rem auto;
+  border-radius: var(--card-border-radius);
+  z-index: 1;
+  position: relative;
+  font-size: 1.6rem;
+  color: var(--color-light);
+}
+
+.container.auth .auth-card .logo {
+  margin: 0rem 0rem 0.8rem;
+  font-size: 4rem;
+}
+
+.container.auth .auth-card .message {
+  font-size: 2rem;
+}
+
+.container.auth .auth-card .form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin: 1.6rem 0rem;
+}
+
+.container.auth .auth-card .form .auth-label {
+  font-size: 1.6rem;
+}
+
+.container.auth .auth-card .form .auth-input {
+  width: 100%;
+  max-width: 22rem;
+  border-radius: var(--border-radius);
+  padding: 0.4rem 0.8rem;
+  background: var(--color-light);
+  color: var(--color-dark);
+  /* color-scheme: dark; */
+}
+
+.container.auth .auth-card .form .imp-mark {
+  color: var(--color-red);
+  margin-left: 0.6rem;
+}
+
+.container.auth .auth-card .form .form-error-msg {
+  color: var(--color-dark);
+  background: var(--color-danger);
+  border-radius: var(--border-radius);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 0rem 0.8rem;
+  margin-top: 0.2rem;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: reveal 0.3s ease-in forwards;
+}
+
+.container.auth .auth-card .form .offscreen {
+  display: none;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* --color-success
+--color-danger */
