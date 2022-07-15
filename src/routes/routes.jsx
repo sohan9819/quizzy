@@ -8,17 +8,56 @@ import {
   Game,
   Result,
 } from '../pages/all';
+import { RequireAuth } from './RequireAuth';
+import { RequireNoAuth } from './RequireNoAuth';
+import { ForgotPassword } from '../pages/all';
 
 export const RouterRoutes = () => {
   return (
     <Routes>
       <Route path='/' element={<Landing />} />
       <Route path='/home' element={<Home />} />
-      <Route path='/profile' element={<Profile />} />
-      <Route path='/auth/signin' element={<SignIn />} />
-      <Route path='/auth/signup' element={<SignUp />} />
-      <Route path='/game' element={<Game />} />
-      <Route path='/result' element={<Result />} />
+      <Route
+        path='/profile'
+        element={
+          <RequireAuth>
+            <Profile />
+          </RequireAuth>
+        }
+      />
+      <Route
+        path='/auth/signin'
+        element={
+          <RequireNoAuth>
+            <SignIn />
+          </RequireNoAuth>
+        }
+      />
+      <Route
+        path='/auth/signup'
+        element={
+          <RequireNoAuth>
+            <SignUp />
+          </RequireNoAuth>
+        }
+      />
+      <Route path='/auth/forgot-password' element={<ForgotPassword />} />
+      <Route
+        path='/game'
+        element={
+          <RequireAuth>
+            <Game />
+          </RequireAuth>
+        }
+      />
+      <Route
+        path='/result'
+        element={
+          <RequireAuth>
+            <Result />
+          </RequireAuth>
+        }
+      />
     </Routes>
   );
 };
