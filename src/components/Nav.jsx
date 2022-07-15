@@ -1,9 +1,12 @@
 import { FiMenu, FiUser } from 'react-icons/fi';
 import { GiBurningBook } from 'react-icons/gi';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ThemeToggler } from './all';
+import { useAuthContext } from '../context/AuthContext';
 
 export const Nav = () => {
+  const { user } = useAuthContext();
+
   return (
     <nav className='navbar'>
       <Link to='/' className='title'>

@@ -127,3 +127,10 @@
 .cta:focus .cta-icon {
   transform: translate(3px);
 }
+
+/* ############ AUTH SOCIAL BUTTONS #################### */
+
+.auth-social-buttons {
+  background: none;
+  cursor: pointer;
+}

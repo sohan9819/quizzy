@@ -5,5 +5,6 @@ import { SignIn } from './SignIn';
 import { SignUp } from './SignUp';
 import { Game } from './Game';
 import { Result } from './Result';
+import { ForgotPassword } from './ForgotPassword';
 
-export { Landing, Home, Profile, SignIn, SignUp, Game, Result };
+export { Landing, Home, Profile, SignIn, SignUp, Game, Result, ForgotPassword };

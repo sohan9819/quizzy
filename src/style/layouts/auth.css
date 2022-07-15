@@ -45,6 +45,13 @@
   font-size: 1.6rem;
 }
 
+.container.auth .auth-card .form .auth-reset {
+  width: 100%;
+  text-align: right;
+  color: var(--color-red);
+  font-weight: 600;
+}
+
 .container.auth .auth-card .form .auth-input {
   width: 100%;
   max-width: 22rem;
@@ -86,3 +93,40 @@
 
 /* --color-success
 --color-danger */
+
+.auth-hr {
+  width: 100%;
+  opacity: 0.8;
+  color: var(--color-dark);
+}
+
+.social-auth {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  font-size: 4rem;
+  margin: 1.5rem 0rem;
+}
+
+.container.auth .auth-card .auth-error {
+  color: var(--color-dark);
+  background: var(--color-red);
+  border-radius: var(--border-radius);
+  width: 100%;
+  text-align: center;
+  padding: 0rem 0.8rem;
+  margin-top: 0.2rem;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: reveal 0.3s ease-in forwards;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

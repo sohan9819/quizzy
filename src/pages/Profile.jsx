@@ -1,11 +1,22 @@
 import { Layout } from '../layout/layout';
 import { FiEdit2 } from 'react-icons/fi';
+import { useAuthContext } from '../context/AuthContext';
 
 export const Profile = () => {
+  const { user, logOut } = useAuthContext();
+
+  const handleLogout = async () => {
+    try {
+      await logOut();
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   return (
     <Layout>
       <div class='container profile'>
-        <article class='profile-card edit'>
+        <article class='profile-card'>
           <div className='profile-header'>
             <h2 class='logo'>Profile</h2>
             <div className='edit-profile-btn'>
@@ -15,7 +26,7 @@ export const Profile = () => {
             </div>
           </div>
           <form className='form'>
-            <label htmlFor='username' className='profile-label'>
+            {/* <label htmlFor='username' className='profile-label'>
               Username<span className='imp-mark'>*</span>
               <br />
               <input
@@ -28,7 +39,7 @@ export const Profile = () => {
                 readOnly
                 required
               />
-            </label>
+            </label> */}
             <label htmlFor='email' className='profile-label'>
               Email<span className='imp-mark'>*</span>
               <br />
@@ -38,8 +49,9 @@ export const Profile = () => {
                 className='profile-input'
                 placeholder='Email Address'
                 autoComplete='off'
-                value={'sohanshetty2001@gmail.com'}
+                value={user.email}
                 required
+                readOnly
               />
             </label>
             {/* <label htmlFor='password' className='profile-label'>
@@ -59,6 +71,9 @@ export const Profile = () => {
             </button>
           </form>
         </article>
+        <button onClick={handleLogout} className='btn btn-secondary'>
+          Logout
+        </button>
       </div>
     </Layout>
   );
