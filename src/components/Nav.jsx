@@ -27,9 +27,7 @@ export const Nav = () => {
           <li>
             <ThemeToggler />
           </li>
-          <li>
-            <button className='btn btn-primary'>Logout</button>
-          </li>
+          <li>{user && <button className='btn btn-primary'>Logout</button>}</li>
         </ul>
       </div>
     </nav>
