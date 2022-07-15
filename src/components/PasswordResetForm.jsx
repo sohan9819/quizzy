@@ -14,7 +14,6 @@ export const PasswordResetForm = () => {
       await resetPassword(email);
       navigate('/');
     } catch (error) {
-      console.log('Error ', error);
       setError(error.message);
     }
   };
