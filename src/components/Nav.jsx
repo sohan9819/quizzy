@@ -5,7 +5,15 @@ import { ThemeToggler } from './all';
 import { useAuthContext } from '../context/AuthContext';
 
 export const Nav = () => {
-  const { user } = useAuthContext();
+  const { user, logOut } = useAuthContext();
+
+  const handleLogout = async () => {
+    try {
+      await logOut();
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   return (
     <nav className='navbar'>
@@ -27,7 +35,17 @@ export const Nav = () => {
           <li>
             <ThemeToggler />
           </li>
-          <li>{user && <button className='btn btn-primary'>Logout</button>}</li>
+          <li>
+            {user ? (
+              <button className='btn btn-secondary' onClick={handleLogout}>
+                Logout
+              </button>
+            ) : (
+              <Link to={'/auth/signin'} className='btn btn-primary'>
+                Login
+              </Link>
+            )}
+          </li>
         </ul>
       </div>
     </nav>
