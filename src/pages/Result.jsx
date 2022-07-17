@@ -1,4 +1,5 @@
 import { Layout } from '../layout/layout';
+import { ResultCard } from '../components/ResultCard';
 
 export const Result = () => {
   return (
@@ -16,79 +17,10 @@ export const Result = () => {
           </div>
         </div>
         <div className='questions'>
-          <ol className='questions-list'>
-            <li className='question'>
-              <h2 className='qt'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                assumenda architecto, iure sed. Ex?
-              </h2>
-              <ul className='options'>
-                <li className='option'>
-                  <label className=''>Option 1</label>
-                </li>
-                <li className='option'>
-                  <label className=''>Option 2</label>
-                </li>
-                <li className='option'>
-                  <label className='wrong'>Option 3</label>
-                </li>
-                <li className='option'>
-                  <label className=''>Option 4</label>
-                </li>
-              </ul>
-            </li>
-            <li className='question'>
-              <h2 className='qt'>This is the question ?</h2>
-              <ul className='options'>
-                <li className='option'>
-                  <label className=''>Option 1</label>
-                </li>
-                <li className='option'>
-                  <label className='right'>Option 2</label>
-                </li>
-                <li className='option'>
-                  <label className=''>Option 3</label>
-                </li>
-                <li className='option'>
-                  <label className=''>Option 4</label>
-                </li>
-              </ul>
-            </li>
-            <li className='question'>
-              <h2 className='qt'>This is the question ?</h2>
-              <ul className='options'>
-                <li className='option'>
-                  <label className=''>Option 1</label>
-                </li>
-                <li className='option'>
-                  <label className=''>Option 2</label>
-                </li>
-                <li className='option'>
-                  <label className='right'>Option 3</label>
-                </li>
-                <li className='option'>
-                  <label className=''>Option 4</label>
-                </li>
-              </ul>
-            </li>
-            <li className='question'>
-              <h2 className='qt'>This is the question ?</h2>
-              <ul className='options'>
-                <li className='option'>
-                  <label className=''>Option 1</label>
-                </li>
-                <li className='option'>
-                  <label className=''>Option 2</label>
-                </li>
-                <li className='option'>
-                  <label className='wrong'>Option 3</label>
-                </li>
-                <li className='option'>
-                  <label className=''>Option 4</label>
-                </li>
-              </ul>
-            </li>
-          </ol>
+          <ResultCard />
+          <ResultCard />
+          <ResultCard />
+          <ResultCard />
           <button className='btn btn-primary'>Try Again</button>
         </div>
       </div>

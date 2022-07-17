@@ -1,4 +1,6 @@
 import { Layout } from '../layout/layout';
+import { Link } from 'react-router-dom';
+
 export const Home = () => {
   return (
     <Layout>
@@ -42,7 +44,9 @@ export const Home = () => {
               &nbsp; Hard
             </label>
           </div>
-          <button className='btn btn-primary'>Start</button>
+          <Link to={'/game'} className='btn btn-primary'>
+            Start
+          </Link>
         </form>
       </div>
     </Layout>
