@@ -1,5 +1,6 @@
 import { Layout } from '../layout/layout';
 import { ResultCard } from '../components/ResultCard';
+import { Link } from 'react-router-dom';
 
 export const Result = () => {
   return (
@@ -21,7 +22,9 @@ export const Result = () => {
           <ResultCard />
           <ResultCard />
           <ResultCard />
-          <button className='btn btn-primary'>Try Again</button>
+          <Link to={'/home'} className='btn btn-primary'>
+            Try Again
+          </Link>
         </div>
       </div>
     </Layout>

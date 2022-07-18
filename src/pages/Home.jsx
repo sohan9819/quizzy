@@ -1,14 +1,24 @@
 import { Layout } from '../layout/layout';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const Home = () => {
+  const navigate = useNavigate();
+
+  const submithandler = (e) => {
+    e.preventDefault();
+    console.log(e.target.category.value);
+    console.log(e.target.difficulty.value);
+    navigate('/game ');
+  };
+
   return (
     <Layout>
       <div className='container home'>
-        <form className='game-selector'>
+        <form className='game-selector' onSubmit={submithandler}>
           <div className='category-selector'>
             <h2>Category</h2>
             <select name='category' id='category'>
+              <option value=''>Any Category</option>
               <option value='9'>General Knowledge</option>
               <option value='10'>Book</option>
               <option value='11'>Film</option>
@@ -20,33 +30,42 @@ export const Home = () => {
           </div>
           <div className='difficulty-selector'>
             <h2>Difficulty</h2>
-            <label htmlFor='easy'>
-              <input
-                type='radio'
-                value='easy'
-                name='difficulty'
-                id='easy'
-                required
-              />
+            <input
+              type='radio'
+              value='easy'
+              name='difficulty'
+              id='easy'
+              required
+              className='difficulty-input'
+              checked
+            />
+            <label htmlFor='easy' className='difficulty-label'>
               &nbsp; Easy
             </label>
-            <label htmlFor='medium'>
-              <input
-                type='radio'
-                value='medium'
-                name='difficulty'
-                id='medium'
-              />
+            <input
+              type='radio'
+              value='medium'
+              name='difficulty'
+              id='medium'
+              className='difficulty-input'
+            />
+            <label htmlFor='medium' className='difficulty-label'>
               &nbsp; Medium
             </label>
-            <label htmlFor='hard'>
-              <input type='radio' value='hard' name='difficulty' id='hard' />
+            <input
+              type='radio'
+              value='hard'
+              name='difficulty'
+              id='hard'
+              className='difficulty-input'
+            />
+            <label htmlFor='hard' className='difficulty-label'>
               &nbsp; Hard
             </label>
           </div>
-          <Link to={'/game'} className='btn btn-primary'>
+          <button type='submit' to={'/game'} className='btn btn-primary'>
             Start
-          </Link>
+          </button>
         </form>
       </div>
     </Layout>

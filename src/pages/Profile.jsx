@@ -26,20 +26,6 @@ export const Profile = () => {
             </div>
           </div>
           <form className='form'>
-            {/* <label htmlFor='username' className='profile-label'>
-              Username<span className='imp-mark'>*</span>
-              <br />
-              <input
-                type='text'
-                id='username'
-                className='profile-input'
-                placeholder='Username'
-                autoComplete='off'
-                value='Sohan Shetty'
-                readOnly
-                required
-              />
-            </label> */}
             <label htmlFor='email' className='profile-label'>
               Email<span className='imp-mark'>*</span>
               <br />
@@ -54,18 +40,6 @@ export const Profile = () => {
                 readOnly
               />
             </label>
-            {/* <label htmlFor='password' className='profile-label'>
-              Password<span className='imp-mark'>*</span>
-              <br />
-              <input
-                type='password'
-                id='password'
-                className='profile-input'
-                placeholder='Password'
-                autoComplete='off'
-                required
-              />
-            </label> */}
             <button className='btn btn-primary' type='submit'>
               Save changes
             </button>

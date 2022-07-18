@@ -1,6 +1,7 @@
 import { Layout } from '../layout/layout';
 import { QuestionCard } from '../components/QuestionCard';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export const Game = () => {
   return (
