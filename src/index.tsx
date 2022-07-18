@@ -5,6 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import { AuthContextProvider } from './context/AuthContext';
+import { store } from './app/store';
+import { Provider } from 'react-redux';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
@@ -12,10 +14,11 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <AuthContextProvider>
-        <App />
-      </AuthContextProvider>
-
+      <Provider store={store}>
+        <AuthContextProvider>
+          <App />
+        </AuthContextProvider>
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>
 );
