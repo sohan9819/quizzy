@@ -1,0 +1,75 @@
+.question-card {
+  height: max-content;
+  width: 100vw;
+  max-width: 70rem;
+  background: var(--color-dark);
+  color: var(--color-light);
+  padding: 1.4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 3fr;
+  grid-template-areas: 'question_no option' 'question option';
+  border-radius: var(--card-border-radius);
+  column-gap: 1rem;
+}
+
+.question-number {
+  grid-area: question_no;
+  font-size: 1.6rem;
+  padding: 0rem 0.5rem;
+}
+
+.question-number .question-number-text {
+  font-size: 2.8rem;
+}
+
+.question-text {
+  grid-area: question;
+  font-size: 1.8rem;
+  padding: 1rem 0.5rem;
+}
+
+.question-options {
+  grid-area: option;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.4rem;
+  font-size: 1.8rem;
+}
+
+.option-input {
+  display: none;
+}
+
+.option-label {
+  width: 100%;
+  border: 2px solid var(--color-light);
+  border-radius: 1.4rem;
+  padding: 0.5rem 1rem;
+}
+
+.option-label.right {
+  background: var(--color-green) !important;
+  color: var(--color-gray) !important;
+  font-weight: 600;
+}
+.option-label.wrong {
+  background: var(--color-red) !important;
+  color: var(--color-gray) !important;
+  font-weight: 600;
+}
+
+.option-input:checked + .option-label {
+  background: var(--color-light);
+  color: var(--color-dark);
+}
+
+@media (max-width: 740px) {
+  .question-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 3fr auto;
+    grid-template-areas: 'question_no' 'question' 'option';
+  }
+}

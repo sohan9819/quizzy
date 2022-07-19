@@ -134,3 +134,7 @@
   background: none;
   cursor: pointer;
 }
+
+.next-button {
+  margin-top: 1rem;
+}
