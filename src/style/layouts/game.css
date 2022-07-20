@@ -22,12 +22,17 @@
   border-bottom: 2px solid var(--color-dark);
 }
 
+.container.game .game-info .difficulty {
+  text-transform: capitalize;
+}
+
 .container.game .questions {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 4rem;
+  gap: 1.5rem;
   padding-left: 2rem;
+  margin-top: 1.5rem;
 }
