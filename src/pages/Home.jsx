@@ -1,14 +1,43 @@
 import { Layout } from '../layout/layout';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import {
+  resetGame,
+  setCategory,
+  setDifficulty,
+  setOutOff,
+} from 'features/game/gameSlice';
+import { categoryName } from 'utils/utils';
 
 export const Home = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const submithandler = (e) => {
     e.preventDefault();
-    console.log(e.target.category.value);
-    console.log(e.target.difficulty.value);
-    navigate('/game ');
+    dispatch(resetGame(0));
+    dispatch(
+      setCategory({
+        name: categoryName(e.target.category.value),
+        value: e.target.category.value,
+      })
+    );
+    dispatch(setDifficulty(e.target.difficulty.value));
+    switch (e.target.difficulty.value) {
+      case 'easy':
+        dispatch(setOutOff(10));
+        break;
+      case 'medium':
+        dispatch(setOutOff(20));
+        break;
+      case 'hard':
+        dispatch(setOutOff(30));
+        break;
+      default:
+        break;
+    }
+
+    navigate('/game');
   };
 
   return (
@@ -30,38 +59,43 @@ export const Home = () => {
           </div>
           <div className='difficulty-selector'>
             <h2>Difficulty</h2>
-            <input
-              type='radio'
-              value='easy'
-              name='difficulty'
-              id='easy'
-              required
-              className='difficulty-input'
-              checked
-            />
-            <label htmlFor='easy' className='difficulty-label'>
-              &nbsp; Easy
-            </label>
-            <input
-              type='radio'
-              value='medium'
-              name='difficulty'
-              id='medium'
-              className='difficulty-input'
-            />
-            <label htmlFor='medium' className='difficulty-label'>
-              &nbsp; Medium
-            </label>
-            <input
-              type='radio'
-              value='hard'
-              name='difficulty'
-              id='hard'
-              className='difficulty-input'
-            />
-            <label htmlFor='hard' className='difficulty-label'>
-              &nbsp; Hard
-            </label>
+            <div className='difficulty-option'>
+              <input
+                type='radio'
+                value='easy'
+                name='difficulty'
+                id='easy'
+                required
+                className='difficulty-input'
+              />
+              <label htmlFor='easy' className='difficulty-label'>
+                &nbsp; Easy
+              </label>
+            </div>
+            <div className='difficulty-option'>
+              <input
+                type='radio'
+                value='medium'
+                name='difficulty'
+                id='medium'
+                className='difficulty-input'
+              />
+              <label htmlFor='medium' className='difficulty-label'>
+                &nbsp; Medium
+              </label>
+            </div>
+            <div className='difficulty-option'>
+              <input
+                type='radio'
+                value='hard'
+                name='difficulty'
+                id='hard'
+                className='difficulty-input'
+              />
+              <label htmlFor='hard' className='difficulty-label'>
+                &nbsp; Hard
+              </label>
+            </div>
           </div>
           <button type='submit' to={'/game'} className='btn btn-primary'>
             Start

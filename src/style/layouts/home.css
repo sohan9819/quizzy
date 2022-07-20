@@ -32,8 +32,17 @@
   gap: 1rem;
 }
 
+.container.home .game-selector .difficulty-selector .difficulty-option {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container.home .game-selector .difficulty-selector .difficulty-input {
-  display: none;
+  position: absolute;
+  opacity: 0;
 }
 
 .container.home .game-selector .difficulty-selector .difficulty-label {
@@ -43,6 +52,7 @@
   border: 2px solid var(--color-dark);
   border-radius: 1.4rem;
   padding: 0.5rem 1rem;
+  width: 100%;
 }
 
 .container.home
