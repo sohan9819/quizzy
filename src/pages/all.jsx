@@ -7,6 +7,7 @@ import { Game } from './Game';
 import { Result } from './Result';
 import { ForgotPassword } from './ForgotPassword';
 import { Rules } from './Rules';
+import { Error404 } from './Error404';
 
 export {
   Landing,
@@ -18,4 +19,5 @@ export {
   Result,
   ForgotPassword,
   Rules,
+  Error404,
 };

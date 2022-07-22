@@ -39,7 +39,7 @@ export const Rules = () => {
           </li>
           <li> You cannot skip any question</li>
         </ul>
-        <Link to={'/home'} className='btn btn-primary rules-btn'>
+        <Link to={'/home'} className='btn btn-primary back-btn'>
           <FiArrowLeft /> back to Home
         </Link>
       </div>

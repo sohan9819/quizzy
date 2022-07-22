@@ -9,6 +9,7 @@ import {
   Result,
   ForgotPassword,
   Rules,
+  Error404,
 } from '../pages/all';
 import { RequireAuth } from './RequireAuth';
 import { RequireNoAuth } from './RequireNoAuth';
@@ -19,6 +20,7 @@ export const RouterRoutes = () => {
       <Route path='/' element={<Landing />} />
       <Route path='/home' element={<Home />} />
       <Route path='/rules' element={<Rules />} />
+
       <Route
         path='/profile'
         element={
@@ -60,6 +62,7 @@ export const RouterRoutes = () => {
           </RequireAuth>
         }
       />
+      <Route path='*' element={<Error404 />} />
     </Routes>
   );
 };

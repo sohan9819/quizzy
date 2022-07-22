@@ -32,9 +32,3 @@
 .container.rules .rules-list-container .rules-mark-list .mark-list {
   tab-size: 8;
 }
-.rules-btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
