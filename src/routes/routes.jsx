@@ -7,16 +7,18 @@ import {
   SignUp,
   Game,
   Result,
+  ForgotPassword,
+  Rules,
 } from '../pages/all';
 import { RequireAuth } from './RequireAuth';
 import { RequireNoAuth } from './RequireNoAuth';
-import { ForgotPassword } from '../pages/all';
 
 export const RouterRoutes = () => {
   return (
     <Routes>
       <Route path='/' element={<Landing />} />
       <Route path='/home' element={<Home />} />
+      <Route path='/rules' element={<Rules />} />
       <Route
         path='/profile'
         element={

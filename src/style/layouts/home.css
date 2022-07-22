@@ -63,3 +63,8 @@
   background: var(--color-dark);
   color: var(--color-light);
 }
+
+.container.home .game-selector .rules-label .rules-link {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
