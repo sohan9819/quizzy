@@ -1,5 +1,5 @@
 import { Layout } from '../layout/layout';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import {
   resetGame,
@@ -97,6 +97,15 @@ export const Home = () => {
               </label>
             </div>
           </div>
+          <label htmlFor='rules' className='rules-label'>
+            <input type='checkbox' name='rules' id='rules' required /> I have
+            read the{' '}
+            <Link to={'/rules'} className='rules-link'>
+              <i>
+                <b>Rules</b>{' '}
+              </i>
+            </Link>
+          </label>
           <button type='submit' to={'/game'} className='btn btn-primary'>
             Start
           </button>

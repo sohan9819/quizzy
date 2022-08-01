@@ -138,3 +138,10 @@
 .next-button {
   margin-top: 1rem;
 }
+
+.back-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
