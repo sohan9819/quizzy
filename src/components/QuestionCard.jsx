@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { resetGame, addUserAnswers } from 'features/game/gameSlice';
 import { useDispatch } from 'react-redux';
 
@@ -36,12 +35,21 @@ export const QuestionCard = ({
         correctAnswer: correctAnswer,
       })
     );
+    [...e.target.option].forEach((radio) => {
+      radio.checked = radio.defaultChecked;
+    });
+
     nextQuestion();
   };
 
   const quitHandler = (e) => {
-    dispatch(resetGame());
-    navigate('/');
+    if (window.confirm('Do you want to quit ?')) {
+      console.log('Quit the game');
+      dispatch(resetGame());
+      navigate('/');
+    } else {
+      console.log('Continue with the game');
+    }
   };
 
   return (
