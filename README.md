@@ -1,3 +1,3 @@
 # QUIZZY
 
-### PLAY NOW : https://quizzy-development.firebaseapp.com/
+### PLAY NOW : [Quizzy Game](https://quizzy-game.netlify.app)
