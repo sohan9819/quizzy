@@ -7,14 +7,15 @@ import { getAuth } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
 const firebaseConfig = {
-  apiKey: 'AIzaSyCa1fENlbhoZJCaFS_dWQoJyinjBXZCK58',
-  authDomain: 'quizzy-development.firebaseapp.com',
-  projectId: 'quizzy-development',
-  storageBucket: 'quizzy-development.appspot.com',
-  messagingSenderId: '13576353448',
-  appId: '1:13576353448:web:cf3a2947845a62adf0349d',
-  measurementId: 'G-1NPNPQM6T8',
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
