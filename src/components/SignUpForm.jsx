@@ -25,7 +25,7 @@ export const SignUpForm = () => {
       );
     }
 
-    if (password.current.value != confirm_password.current.value) {
+    if (password.current.value !== confirm_password.current.value) {
       confirm_password.current.setCustomValidity("Passwords Don't Match");
     } else {
       confirm_password.current.setCustomValidity('');

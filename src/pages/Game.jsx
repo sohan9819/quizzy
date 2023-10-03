@@ -1,6 +1,6 @@
 import { Layout } from '../layout/layout';
 import { QuestionCard } from '../components/QuestionCard';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   categoryNameSelector,
@@ -26,7 +26,7 @@ export const Game = () => {
   const [questions, setQuestions] = useState('');
   const [apiCallStatus, setApiCallStatus] = useState('Loading');
   const [questionNumber, setQuestionNumber] = useState(0);
-  const [gameOver, setGameOver] = useState({ status: false, reason: '' });
+  const [gameOver] = useState({ status: false, reason: '' });
 
   const point = difficulty === 'easy' ? 1 : difficulty === 'medium' ? 2 : 3;
 
@@ -45,7 +45,7 @@ export const Game = () => {
         console.log(error.message);
         setApiCallStatus(error.message);
       });
-  }, []);
+  }, [categoryValue, difficulty]);
 
   const checkAnswer = (usrAns) => {
     if (questions[questionNumber].correct_answer === usrAns) {

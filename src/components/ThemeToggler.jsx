@@ -1,6 +1,6 @@
 import { FiMoon, FiSun } from 'react-icons/fi';
 import { useSelector, useDispatch } from 'react-redux';
-import { setTheme, toggle } from '../features/theme/themeSlice';
+import { setTheme } from '../features/theme/themeSlice';
 import { useRef, useEffect } from 'react';
 
 export const ThemeToggler = () => {
@@ -10,7 +10,7 @@ export const ThemeToggler = () => {
 
   useEffect(() => {
     toggleCheckbox.current.checked = theme === 'dark';
-  }, []);
+  }, [theme]);
 
   useEffect(() => {
     document.body.classList = [theme];
